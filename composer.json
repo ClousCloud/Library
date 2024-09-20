@@ -1,0 +1,15 @@
+{
+    "name": "u0_a901/library",
+    "type": "library",
+    "require-dev": {
+        "php": "^8.3",
+        "php-64bit": "^8.3"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "U0A901\\Library\\": "src/"
+        }
+    },
+    "require": {}
+}
