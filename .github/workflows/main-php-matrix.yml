@@ -46,6 +46,9 @@ jobs:
           restore-keys: |
             composer-v2-cache-
 
+      - name: Create
+        run: composer --create-project xpocketmc/xpocketmp
+
       - name: Install Composer dependencies
         run: composer install --prefer-dist --no-interaction
 
