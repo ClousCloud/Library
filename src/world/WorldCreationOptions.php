@@ -37,6 +37,7 @@ final class WorldCreationOptions{
 
 	/** @phpstan-var class-string<Generator> */
 	private string $generatorClass = Normal::class;
+	private string $generatorEnd = End::class;
 	private int $seed;
 	private int $difficulty = World::DIFFICULTY_NORMAL;
 	private string $generatorOptions = "";
@@ -54,12 +55,24 @@ final class WorldCreationOptions{
 	/** @phpstan-return class-string<Generator> */
 	public function getGeneratorClass() : string{ return $this->generatorClass; }
 
+	public function getGeneratorEnd() : string{ return $this->generatorEnd; }
+
 	/**
 	 * @phpstan-param class-string<Generator> $generatorClass
 	 * @return $this
 	 */
 	public function setGeneratorClass(string $generatorClass) : self{
 		Utils::testValidInstance($generatorClass, Generator::class);
+		$this->generatorClass = $generatorClass;
+		return $this;
+	}
+
+	/**
+         * @phpstan-param class-string<Generator> $generatorEnd
+	 * @return $this
+         */
+	public function setGeneratorEnd(string $generatorEnd) : self{
+		Utils::testValidInstance($generatorEnd, Generator::class);
 		$this->generatorClass = $generatorClass;
 		return $this;
 	}
