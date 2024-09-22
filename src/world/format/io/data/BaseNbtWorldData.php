@@ -99,6 +99,9 @@ abstract class BaseNbtWorldData implements WorldData{
 			case 'pocketmine\level\generator\normal\Normal':
 				return "normal";
 			/** @noinspection ClassConstantCanBeUsedInspection */
+			case 'pocketmine\level\generator\normal\Normal':
+			        return "end";
+			/** @noinspection ClassConstantCanBeUsedInspection */
 			case 'pocketmine\level\generator\Flat':
 				return "flat";
 		}
