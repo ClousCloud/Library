@@ -55,6 +55,8 @@ final class GeneratorManager{
 		$this->addAlias("normal", "default");
 		$this->addGenerator(Nether::class, "nether", fn() => null);
 		$this->addAlias("nether", "hell");
+		$this->addGenerator(Normal::class, "end", fn() => null);
+		$this->addAlias("end", "end");
 	}
 
 	/**
